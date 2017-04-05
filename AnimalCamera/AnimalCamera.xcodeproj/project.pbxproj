@@ -137,6 +137,7 @@
 				TargetAttributes = {
 					3F4FD4B11E9523B00077E8A7 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = V852DZ73SD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,10 +349,13 @@
 			baseConfigurationReference = AA52C64EEABCDB85E5BB0DBE /* Pods-AnimalCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V852DZ73SD;
 				INFOPLIST_FILE = AnimalCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itcast.AnimalCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjj.AnimalCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -360,10 +364,13 @@
 			baseConfigurationReference = 00841B3513B1A23F52693632 /* Pods-AnimalCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V852DZ73SD;
 				INFOPLIST_FILE = AnimalCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = itcast.AnimalCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cjj.AnimalCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -386,6 +393,7 @@
 				3F4FD4CB1E9523B00077E8A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
