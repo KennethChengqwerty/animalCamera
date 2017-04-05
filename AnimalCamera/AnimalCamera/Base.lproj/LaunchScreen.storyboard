@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXN-RQ-jz1">
-                                <rect key="frame" x="172.5" y="626" width="29.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶脸相机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXN-RQ-jz1">
+                                <rect key="frame" x="16" y="591" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92258338730569944" green="0.92258338730569944" blue="0.92258338730569944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vXN-RQ-jz1" secondAttribute="bottom" constant="20" id="2IF-Sc-hcZ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vXN-RQ-jz1" secondAttribute="bottom" constant="40" id="2IF-Sc-hcZ"/>
                             <constraint firstItem="vXN-RQ-jz1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GGr-Gn-iy6"/>
+                            <constraint firstItem="vXN-RQ-jz1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="lhh-Yu-AHv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vXN-RQ-jz1" secondAttribute="trailing" id="r3d-Lu-6x9"/>
                         </constraints>
                     </view>
                 </viewController>

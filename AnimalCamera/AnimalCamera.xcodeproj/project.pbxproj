@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		3F4FD4B71E9523B00077E8A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4B61E9523B00077E8A7 /* main.m */; };
 		3F4FD4BA1E9523B00077E8A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4B91E9523B00077E8A7 /* AppDelegate.m */; };
-		3F4FD4BD1E9523B00077E8A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4BC1E9523B00077E8A7 /* ViewController.m */; };
+		3F4FD4BD1E9523B00077E8A7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4BC1E9523B00077E8A7 /* MainViewController.m */; };
 		3F4FD4C01E9523B00077E8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD4BE1E9523B00077E8A7 /* Main.storyboard */; };
 		3F4FD4C21E9523B00077E8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD4C11E9523B00077E8A7 /* Assets.xcassets */; };
 		3F4FD4C51E9523B00077E8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4FD4C31E9523B00077E8A7 /* LaunchScreen.storyboard */; };
+		3F4FD4D21E95294B0077E8A7 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4D11E95294B0077E8A7 /* GPUImageBeautifyFilter.m */; };
+		3F4FD4D61E952A470077E8A7 /* KCControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4FD4D51E952A470077E8A7 /* KCControlView.m */; };
 		980759B6CA8168C68D3B1DA4 /* libPods-AnimalCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8811AA064EE12A73C35B5B6E /* libPods-AnimalCamera.a */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +24,16 @@
 		3F4FD4B61E9523B00077E8A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F4FD4B81E9523B00077E8A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F4FD4B91E9523B00077E8A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3F4FD4BB1E9523B00077E8A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3F4FD4BC1E9523B00077E8A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3F4FD4BB1E9523B00077E8A7 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		3F4FD4BC1E9523B00077E8A7 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3F4FD4BF1E9523B00077E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F4FD4C11E9523B00077E8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4FD4C41E9523B00077E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4FD4C61E9523B00077E8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4FD4D01E95294B0077E8A7 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		3F4FD4D11E95294B0077E8A7 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
+		3F4FD4D41E952A470077E8A7 /* KCControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCControlView.h; sourceTree = "<group>"; };
+		3F4FD4D51E952A470077E8A7 /* KCControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCControlView.m; sourceTree = "<group>"; };
 		8811AA064EE12A73C35B5B6E /* libPods-AnimalCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnimalCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA52C64EEABCDB85E5BB0DBE /* Pods-AnimalCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimalCamera/Pods-AnimalCamera.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,10 +71,12 @@
 		3F4FD4B41E9523B00077E8A7 /* AnimalCamera */ = {
 			isa = PBXGroup;
 			children = (
+				3F4FD4D31E952A300077E8A7 /* View */,
+				3F4FD4CF1E95293C0077E8A7 /* Filter */,
 				3F4FD4B81E9523B00077E8A7 /* AppDelegate.h */,
 				3F4FD4B91E9523B00077E8A7 /* AppDelegate.m */,
-				3F4FD4BB1E9523B00077E8A7 /* ViewController.h */,
-				3F4FD4BC1E9523B00077E8A7 /* ViewController.m */,
+				3F4FD4BB1E9523B00077E8A7 /* MainViewController.h */,
+				3F4FD4BC1E9523B00077E8A7 /* MainViewController.m */,
 				3F4FD4BE1E9523B00077E8A7 /* Main.storyboard */,
 				3F4FD4C11E9523B00077E8A7 /* Assets.xcassets */,
 				3F4FD4C31E9523B00077E8A7 /* LaunchScreen.storyboard */,
@@ -84,6 +92,24 @@
 				3F4FD4B61E9523B00077E8A7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F4FD4CF1E95293C0077E8A7 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD4D01E95294B0077E8A7 /* GPUImageBeautifyFilter.h */,
+				3F4FD4D11E95294B0077E8A7 /* GPUImageBeautifyFilter.m */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		3F4FD4D31E952A300077E8A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F4FD4D41E952A470077E8A7 /* KCControlView.h */,
+				3F4FD4D51E952A470077E8A7 /* KCControlView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		60B222812BEF65D08E594616 /* Pods */ = {
@@ -226,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F4FD4BD1E9523B00077E8A7 /* ViewController.m in Sources */,
+				3F4FD4BD1E9523B00077E8A7 /* MainViewController.m in Sources */,
+				3F4FD4D61E952A470077E8A7 /* KCControlView.m in Sources */,
+				3F4FD4D21E95294B0077E8A7 /* GPUImageBeautifyFilter.m in Sources */,
 				3F4FD4BA1E9523B00077E8A7 /* AppDelegate.m in Sources */,
 				3F4FD4B71E9523B00077E8A7 /* main.m in Sources */,
 			);

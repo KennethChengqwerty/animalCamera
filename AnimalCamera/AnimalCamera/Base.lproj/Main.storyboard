@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,34 +20,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB3-Vt-s8t">
-                                <rect key="frame" x="0.0" y="552" width="375" height="115"/>
-                                <color key="backgroundColor" red="1" green="0.24820948900000001" blue="0.29888116399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="cbd-Aj-3Ot"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7L4-fi-luP" customClass="GPUImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nB3-Vt-s8t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3wl-8L-lTM"/>
-                            <constraint firstAttribute="trailing" secondItem="7L4-fi-luP" secondAttribute="trailing" id="8cq-81-fRm"/>
-                            <constraint firstItem="nB3-Vt-s8t" firstAttribute="top" secondItem="7L4-fi-luP" secondAttribute="bottom" id="JMO-KX-n2p"/>
-                            <constraint firstItem="7L4-fi-luP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LUt-9X-02N"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nB3-Vt-s8t" secondAttribute="bottom" id="WOE-sX-gjP"/>
-                            <constraint firstItem="7L4-fi-luP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jIg-oa-Zdv"/>
-                            <constraint firstAttribute="trailing" secondItem="nB3-Vt-s8t" secondAttribute="trailing" id="qCg-2o-hE6"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="controlView" destination="nB3-Vt-s8t" id="6h0-R3-osD"/>
-                        <outlet property="liveView" destination="7L4-fi-luP" id="Y01-vu-8rG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

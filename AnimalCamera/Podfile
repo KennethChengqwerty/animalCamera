@@ -7,5 +7,5 @@ target 'AnimalCamera' do
 
   # Pods for AnimalCamera
   pod 'GPUImage'
-
+  pod 'Masonry'
 end
