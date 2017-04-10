@@ -19,9 +19,11 @@
 @property (weak, nonatomic) GPUImageView *cameraView;
 @property (weak, nonatomic) KCControlView *controlView;
 
-@property (weak, nonatomic) UIImageView *animalFaceView;
+//@property (weak, nonatomic) UIImageView *animalFaceView;
 
 @property (strong, nonatomic) AVCaptureMetadataOutput *metadataOutput;
+
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
 
 //gpuimage
 @property(nonatomic,strong) GPUImageVideoCamera *camera;
@@ -29,26 +31,30 @@
 @end
 
 @implementation MainViewController{
+    //保存脸部数据
 NSMutableDictionary *_facesDictionory;
 }
 
 - (void)viewDidLoad {
     _facesDictionory = [NSMutableDictionary dictionary];
+    
     [super viewDidLoad];
     [self setupView];
     [self setupCamera];
 }
-//- (CALayer *)faceLayerWithFaceID:(NSInteger)faceID {
-//    CALayer *faceLayer = _facesDictionory[@(faceID)];
-//    if(!faceLayer) {
-//        faceLayer = [CALayer new];
-//        faceLayer.borderWidth = 2.0;
-//        faceLayer.borderColor = [UIColor redColor].CGColor;
-//        [_facesDictionory setObject:faceLayer forKey:@(faceID)];
-//        [self.previewLayer addSublayer:faceLayer];
-//    }
-//    return faceLayer;
-//}
+
+- (CALayer *)faceLayerWithFaceID:(NSInteger)faceID {
+    CALayer *faceLayer = _facesDictionory[@(faceID)];
+    if(!faceLayer) {
+        faceLayer = [CALayer new];
+        faceLayer.borderWidth = 2.0;
+        faceLayer.borderColor = [UIColor redColor].CGColor;
+        [_facesDictionory setObject:faceLayer forKey:@(faceID)];
+        [self.previewLayer addSublayer:faceLayer];
+    }
+    return faceLayer;
+}
+
 -(void)setupView{
     GPUImageView *cameraView = [[GPUImageView alloc] init];
     _cameraView = cameraView;
@@ -74,10 +80,10 @@ NSMutableDictionary *_facesDictionory;
         make.left.right.bottom.equalTo(self.view);
     }];
     
-    UIImageView *animalFaceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    _animalFaceView = animalFaceView;
-    animalFaceView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:animalFaceView];
+//    UIImageView *animalFaceView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    _animalFaceView = animalFaceView;
+//    animalFaceView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:animalFaceView];
 }
 
 -(void)setupCamera{
@@ -99,6 +105,14 @@ NSMutableDictionary *_facesDictionory;
     }
     
     [beautifyFilter addTarget:self.cameraView];
+    
+    
+    _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_camera.captureSession];
+    ;
+    self.previewLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:self.previewLayer atIndex:0];
+    
+    
     [_camera startCameraCapture];
     
 }
@@ -106,35 +120,27 @@ NSMutableDictionary *_facesDictionory;
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate -
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     
-//    for (NSNumber *faceID in _facesDictionory) {
-//        CALayer *faceLayer = _facesDictionory[faceID];
-//        faceLayer.hidden = YES;
-//    }
+    for (NSNumber *faceID in _facesDictionory) {
+        CALayer *faceLayer = _facesDictionory[faceID];
+        faceLayer.hidden = YES;
+    }
+    
     
     // 解析识别对象
     for (AVMetadataObject *metadaObject in metadataObjects) {
         
-        float viewW = self.cameraView.frame.size.width;
-        float viewH = self.cameraView.frame.size.height;
-        float x = (1-metadaObject.bounds.origin.y) * viewW;
-        float y = metadaObject.bounds.origin.x * viewH;
-        float w = metadaObject.bounds.size.width* viewW;
-        float h = metadaObject.bounds.size.height* viewH;
+        AVMetadataFaceObject * faceObjcet = (AVMetadataFaceObject *)[self.previewLayer transformedMetadataObjectForMetadataObject:metadaObject];
         
-        NSLog(@"%@",NSStringFromCGRect(metadaObject.bounds));
+        
+        
+        
+//        NSLog(@"%@",NSStringFromCGRect(metadaObject.bounds));
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.animalFaceView.frame = CGRectMake(x, y, w, h);
+            CALayer *faceLayer = [self faceLayerWithFaceID:faceObjcet.faceID];
+            faceLayer.frame = faceObjcet.bounds;
+            faceLayer.hidden = NO;
         });
-       
-        
-        
-//        AVMetadataFaceObject *faceObjcet = (AVMetadataFaceObject *)[self.previewLayer transformedMetadataObjectForMetadataObject:metadaObject];
-//        CALayer *faceLayer = [self faceLayerWithFaceID:faceObjcet.faceID];
-//        faceLayer.frame = faceObjcet.bounds;
-//        faceLayer.hidden = NO;
-        //        NSLog(@"faceID:%zd,bounds:%@",faceObjcet.faceID,NSStringFromCGRect(faceObjcet.bounds));
-        
-        //        AVMetadataFaceObject *faceObject = [AVMetadataFaceObject
+ 
     }
     
     
